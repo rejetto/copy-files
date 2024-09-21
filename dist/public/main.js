@@ -13,7 +13,7 @@
         const {clip} = state
         if (!clip.__copy) return // not for this plugin
         preventDefault()
-        HFS.customRestCall('copy_files', {
+        HFS.apiCall('copy_files', {
             uri_from: from.map(x => x.uri),
             uri_to: to,
         }).then(res => {
