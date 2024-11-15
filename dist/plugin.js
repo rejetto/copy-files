@@ -1,4 +1,4 @@
-exports.version = 1.2
+exports.version = 1.21
 exports.description = "Copy files"
 exports.apiRequired = 9.2 // copy_files
 exports.frontend_js = "main.js"

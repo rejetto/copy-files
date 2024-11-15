@@ -18,7 +18,7 @@
             uri_to: to,
         }).then(res => {
             const bad = _.sumBy(res.errors, x => x ? 1 : 0)
-            HFS.dialogLib.alertDialog(h('div', {},
+            HFS.toast(h('div', {},
                 HFS.t('copy_good_bad', { bad, good: clip.length - bad }, "{good} copied, {bad} failed"),
                 h('ul', {}, res.errors?.map(((e, i) => {
                     e = HFS.misc.xlate(e, HFS.misc.HTTP_MESSAGES)
