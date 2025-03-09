@@ -4,6 +4,7 @@
 
     HFS.onEvent('fileMenu', ({ entry }) =>
         (!onlyFor?.length || onlyFor.some(HFS.userBelongsTo))
+        && !entry.isFolder
         && [{ id: 'copy', icon: 'paste', label: "Copy", onClick() {
             state.clip = [entry]
             state.clip.__copy = true
